@@ -1,0 +1,64 @@
+{
+  "5人制足球场": {
+    "length": 31.5,
+    "width": 17.2,
+    "buffer_left_right": 1.0,
+    "buffer_top_bottom": 1.0,
+    "center_circle_radius": 2.25,
+    "line_width": 0.08,
+    "penalty_area_depth": 4.5,
+    "penalty_area_width": 9.0,
+    "goal_area_depth": 1.0,
+    "goal_area_width": 2.34
+  },
+  "7人制足球场": {
+    "length": 50,
+    "width": 32,
+    "buffer_left_right": 2.0,
+    "buffer_top_bottom": 2.0,
+    "center_circle_radius": 4.36,
+    "line_width": 0.08,
+    "penalty_area_depth": 7.86,
+    "penalty_area_width": 19.2,
+    "goal_area_depth": 2.62,
+    "goal_area_width": 8.72
+  },
+  "11人制足球场": {
+    "length": 105,
+    "width": 68,
+    "buffer_left_right": 2.0,
+    "buffer_top_bottom": 2.0,
+    "center_circle_radius": 9.15,
+    "penalty_area_depth": 16.5,
+    "penalty_area_width": 40.32,
+    "goal_area_depth": 5.5,
+    "goal_area_width": 18.32
+  },
+  "学校操场足球场": {
+    "length": 90,
+    "width": 45,
+    "center_circle_radius": 7,
+    "penalty_area_depth": 12,
+    "penalty_area_width": 30,
+    "goal_area_depth": 5,
+    "goal_area_width": 16
+  },
+  "笼式足球场": {
+    "length": 30,
+    "width": 18,
+    "center_circle_radius": 3,
+    "penalty_area_depth": 5,
+    "penalty_area_width": 10,
+    "goal_area_depth": 2.5,
+    "goal_area_width": 6
+  },
+  "非标定制场地": {
+    "length": 50,
+    "width": 30,
+    "center_circle_radius": 5,
+    "penalty_area_depth": 8,
+    "penalty_area_width": 18,
+    "goal_area_depth": 4,
+    "goal_area_width": 10
+  }
+}

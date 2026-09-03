@@ -1,0 +1,12 @@
+services:
+  grassguy-football-designer:
+    build: .
+    container_name: grassguy-football-designer
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    environment:
+      GRASSGUY_APP_PASSWORD: ${GRASSGUY_APP_PASSWORD:-}
+    volumes:
+      - ./output:/app/output
+      - ./logs:/app/logs

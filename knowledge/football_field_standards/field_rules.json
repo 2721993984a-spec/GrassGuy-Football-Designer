@@ -1,0 +1,599 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-07-31",
+  "principles": [
+    "正式比赛尺寸优先采用官方竞赛规则。",
+    "学校、社区、商业、笼式和非标场地可以采用推荐经验值，但必须标明不是正式比赛标准。",
+    "无法追溯来源的数据不得作为默认标准，只能标记为待人工确认。",
+    "图纸生成、白线面积计算和施工图标注后续应优先读取本文件。"
+  ],
+  "sources": {
+    "IFAB_LOTG_LAW1": {
+      "name": "IFAB Laws of the Game - Law 1 The Field of Play",
+      "url": "https://www.theifab.com/laws/latest/the-field-of-play/",
+      "level": "A"
+    },
+    "FIFA_STADIUM_GUIDELINES": {
+      "name": "FIFA Stadium Guidelines - Pitch dimensions and surrounding areas",
+      "url": "https://inside.fifa.com/en/innovation/stadium-guidelines/technical-guidelines/stadiums-guidelines/pitch-dimensions-and-surrounding-areas",
+      "level": "A"
+    },
+    "FIFA_FUTSAL_LOTG": {
+      "name": "FIFA Futsal Laws of the Game",
+      "url": "https://www.fifa.com/",
+      "level": "A",
+      "review_status": "pending_pdf_clause_check"
+    },
+    "CFA_FUTSAL_RULES": {
+      "name": "中国足球协会五人制足球竞赛规则",
+      "url": "https://www.thecfa.cn/",
+      "level": "A",
+      "review_status": "pending_pdf_clause_check"
+    },
+    "FA_PITCH_GOALPOST_GUIDE": {
+      "name": "The FA Guide to Pitch and Goalpost Dimensions",
+      "url": "https://www.thefa.com/",
+      "level": "B"
+    },
+    "FOOTBALL_FOUNDATION_GUIDANCE": {
+      "name": "Football Foundation pitch and line marking guidance",
+      "url": "https://footballfoundation.org.uk/",
+      "level": "B"
+    },
+    "GRASSGUY_INTERNAL_PENDING": {
+      "name": "草皮哥内部推荐经验值",
+      "url": "",
+      "level": "internal_pending_review"
+    },
+    "GRASSGUY_TEMPLATE_WANYING_SHENZAO_2025_0717": {
+      "name": "草皮哥模板：万盈镇沈灶小学足球场.pdf",
+      "url": "C:/Users/GPG666/Desktop/草皮哥足球场画图/画图/万盈镇沈灶小学足球场.pdf",
+      "level": "case_template"
+    }
+  },
+  "field_types": {
+    "11人制足球场": {
+      "source_level": "A",
+      "primary_source": "IFAB_LOTG_LAW1",
+      "applicable_scene": [
+        "专业比赛",
+        "学校",
+        "体育公园",
+        "训练场"
+      ],
+      "pitch_length": {
+        "min": 90,
+        "max": 120,
+        "recommended": 105,
+        "unit": "m",
+        "source": "IFAB_LOTG_LAW1; FIFA_STADIUM_GUIDELINES"
+      },
+      "pitch_width": {
+        "min": 45,
+        "max": 90,
+        "recommended": 68,
+        "unit": "m",
+        "source": "IFAB_LOTG_LAW1; FIFA_STADIUM_GUIDELINES"
+      },
+      "international_pitch_length": {
+        "min": 100,
+        "max": 110,
+        "recommended": 105,
+        "unit": "m",
+        "source": "IFAB_LOTG_LAW1"
+      },
+      "international_pitch_width": {
+        "min": 64,
+        "max": 75,
+        "recommended": 68,
+        "unit": "m",
+        "source": "IFAB_LOTG_LAW1"
+      },
+      "line_width": {
+        "value": 0.12,
+        "rule": "not more than 12 cm",
+        "unit": "m",
+        "source": "IFAB_LOTG_LAW1"
+      },
+      "center_line": {
+        "position": "pitch_length / 2",
+        "source": "IFAB_LOTG_LAW1"
+      },
+      "center_circle_radius": {
+        "value": 9.15,
+        "unit": "m",
+        "source": "IFAB_LOTG_LAW1"
+      },
+      "penalty_mark_distance": {
+        "value": 11,
+        "unit": "m",
+        "source": "IFAB_LOTG_LAW1"
+      },
+      "penalty_arc_radius": {
+        "value": 9.15,
+        "unit": "m",
+        "source": "IFAB_LOTG_LAW1"
+      },
+      "penalty_area": {
+        "depth": 16.5,
+        "width": 40.32,
+        "unit": "m",
+        "source": "IFAB_LOTG_LAW1",
+        "note": "width = 7.32m goal width + 16.5m each side"
+      },
+      "goal_area": {
+        "depth": 5.5,
+        "width": 18.32,
+        "unit": "m",
+        "source": "IFAB_LOTG_LAW1",
+        "note": "width = 7.32m goal width + 5.5m each side"
+      },
+      "corner_arc_radius": {
+        "value": 1,
+        "unit": "m",
+        "source": "IFAB_LOTG_LAW1"
+      },
+      "goal_size": {
+        "width": 7.32,
+        "height": 2.44,
+        "unit": "m",
+        "source": "IFAB_LOTG_LAW1"
+      },
+      "runoff_area": {
+        "side": 2.0,
+        "end": 2.0,
+        "unit": "m",
+        "source": "FIFA_STADIUM_GUIDELINES",
+        "review_status": "pending_project_grade"
+      },
+      "artificial_turf_suitable": true,
+      "notes": "11人制正式标线数据完整；缓冲区/安全区需按项目等级和业主要求确认。"
+    },
+    "5人制足球场": {
+      "source_level": "case_template_reference",
+      "primary_source": "GRASSGUY_INTERNAL_PENDING",
+      "applicable_scene": [
+        "校园",
+        "社区",
+        "商业球场",
+        "训练场",
+        "笼式足球"
+      ],
+      "pitch_length": {
+        "min": 20,
+        "max": 42,
+        "recommended": 31.5,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "case_template_reference"
+      },
+      "pitch_width": {
+        "min": 15,
+        "max": 25,
+        "recommended": 17.2,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "case_template_reference"
+      },
+      "line_width": {
+        "value": 0.08,
+        "unit": "m",
+        "source": "FIFA_FUTSAL_LOTG",
+        "review_status": "pending_pdf_clause_check"
+      },
+      "center_line": {
+        "position": "pitch_length / 2",
+        "source": "FIFA_FUTSAL_LOTG"
+      },
+      "center_circle_radius": {
+        "value": 2.25,
+        "unit": "m",
+        "source": "GRASSGUY_TEMPLATE_WANYING_SHENZAO_2025_0717",
+        "review_status": "template_reference",
+        "ratio": "width * 2.25 / 17.20"
+      },
+      "penalty_mark_distance": {
+        "value": 7.5,
+        "unit": "m",
+        "source": "GRASSGUY_TEMPLATE_WANYING_SHENZAO_2025_0717",
+        "review_status": "template_reference",
+        "ratio": "length * 7.50 / 31.50"
+      },
+      "second_penalty_mark_distance": {
+        "value": null,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "not_used_in_case_template"
+      },
+      "penalty_area": {
+        "depth": 4.5,
+        "width": 9.0,
+        "unit": "m",
+        "source": "GRASSGUY_TEMPLATE_WANYING_SHENZAO_2025_0717",
+        "shape": "two goalpost-centered quarter arcs connected by an inner vertical line; mirrored at both ends",
+        "review_status": "template_reference",
+        "note": "罚球区不是以球门线中点为圆心的整半圆；按模板以上下门柱点为圆心画两段R4.50圆弧并连接。"
+      },
+      "goal_area": {
+        "depth": 1.0,
+        "width": 2.34,
+        "unit": "m",
+        "source": "GRASSGUY_TEMPLATE_WANYING_SHENZAO_2025_0717",
+        "review_status": "template_reference",
+        "note": "图纸平面球门开口/外伸矩形：深1.00m，开口2.34m；实际球门规格仍按goal_size记录。",
+        "ratio": "depth = length * 1.00 / 31.50; width = pitch_width * 2.34 / 17.20"
+      },
+      "corner_arc_radius": {
+        "value": 0.25,
+        "unit": "m",
+        "source": "FIFA_FUTSAL_LOTG",
+        "review_status": "pending_pdf_clause_check"
+      },
+      "goal_size": {
+        "width": 3,
+        "height": 2,
+        "unit": "m",
+        "source": "FIFA_FUTSAL_LOTG",
+        "review_status": "pending_pdf_clause_check"
+      },
+      "runoff_area": {
+        "side": 1.0,
+        "end": 1.0,
+        "unit": "m",
+        "source": "GRASSGUY_TEMPLATE_WANYING_SHENZAO_2025_0717",
+        "review_status": "template_reference"
+      },
+      "artificial_turf_suitable": true,
+      "notes": "当前五人制默认按万盈镇沈灶小学足球场模板：比赛区31.50m x 17.20m，平台默认缓冲区1.00m，输入总尺寸包含缓冲区，罚球区为上下门柱点圆心的两段R4.50圆弧+竖向连接线，中圈R2.25，点球点7.50m，图纸球门开口2.34m。非同尺寸场地按比例自动套用。",
+      "penalty_arc_radius": {
+        "value": 4.5,
+        "unit": "m",
+        "source": "GRASSGUY_TEMPLATE_WANYING_SHENZAO_2025_0717",
+        "review_status": "template_reference",
+        "ratio": "width * 4.50 / 17.20"
+      }
+    },
+    "7人制足球场": {
+      "source_level": "case_template_reference",
+      "primary_source": "GRASSGUY_INTERNAL_PENDING",
+      "applicable_scene": [
+        "校园",
+        "社区",
+        "体育公园",
+        "商业球场",
+        "训练场"
+      ],
+      "pitch_length": {
+        "min": 50,
+        "max": 65,
+        "recommended": 50,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "case_template_reference"
+      },
+      "pitch_width": {
+        "min": 30,
+        "max": 45,
+        "recommended": 32,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "case_template_reference"
+      },
+      "line_width": {
+        "value": 0.08,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "center_line": {
+        "position": "pitch_length / 2",
+        "source": "FA_PITCH_GOALPOST_GUIDE"
+      },
+      "center_circle_radius": {
+        "value": 4.36,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "case_template_reference"
+      },
+      "penalty_mark_distance": {
+        "value": 5.24,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "case_template_reference"
+      },
+      "penalty_arc_radius": {
+        "value": 4.36,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "case_template_reference"
+      },
+      "penalty_area": {
+        "depth": 7.86,
+        "width": 19.2,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "case_template_reference"
+      },
+      "goal_area": {
+        "depth": 2.62,
+        "width": 8.72,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "case_template_reference",
+        "note": "按草皮哥七人制案例图显示小禁区，非全球统一官方尺寸。"
+      },
+      "corner_arc_radius": {
+        "value": 0.6,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "case_template_reference"
+      },
+      "goal_size": {
+        "width": 3.66,
+        "height": 1.83,
+        "unit": "m",
+        "source": "FA_PITCH_GOALPOST_GUIDE",
+        "review_status": "pending_exact_pdf_clause"
+      },
+      "runoff_area": {
+        "side": 2.0,
+        "end": 2.0,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "case_template_reference"
+      },
+      "artificial_turf_suitable": true,
+      "notes": "7人制没有全球统一正式尺寸，国内项目需按地方赛事或甲方要求确认。"
+    },
+    "笼式足球场": {
+      "source_level": "pending_review",
+      "primary_source": "DB37_T3912_PENDING",
+      "applicable_scene": [
+        "笼式足球",
+        "商业球场",
+        "社区",
+        "训练场"
+      ],
+      "pitch_length": {
+        "min": null,
+        "max": null,
+        "recommended": 30,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "pitch_width": {
+        "min": null,
+        "max": null,
+        "recommended": 18,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "line_width": {
+        "value": 0.08,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "center_line": {
+        "position": "pitch_length / 2",
+        "source": "GRASSGUY_INTERNAL_PENDING"
+      },
+      "center_circle_radius": {
+        "value": 3,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "penalty_mark_distance": {
+        "value": null,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "penalty_area": {
+        "depth": 5,
+        "width": 10,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "goal_area": {
+        "depth": 2.5,
+        "width": 6,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "corner_arc_radius": {
+        "value": 0.25,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "goal_size": {
+        "width": null,
+        "height": null,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "runoff_area": {
+        "side": 0,
+        "end": 0,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_project_design"
+      },
+      "artificial_turf_suitable": true,
+      "notes": "笼式场地安全边界由围网系统承担，仍需按项目确认门区和缓冲规则。"
+    },
+    "学校操场足球场": {
+      "source_level": "pending_review",
+      "primary_source": "JYT_0629_2020_PENDING",
+      "applicable_scene": [
+        "校园",
+        "训练场",
+        "非标工程"
+      ],
+      "pitch_length": {
+        "min": null,
+        "max": null,
+        "recommended": 90,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_school_standard_confirmation"
+      },
+      "pitch_width": {
+        "min": null,
+        "max": null,
+        "recommended": 45,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_school_standard_confirmation"
+      },
+      "line_width": {
+        "value": 0.08,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "center_line": {
+        "position": "pitch_length / 2",
+        "source": "GRASSGUY_INTERNAL_PENDING"
+      },
+      "center_circle_radius": {
+        "value": 7,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "penalty_mark_distance": {
+        "value": null,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "penalty_area": {
+        "depth": 12,
+        "width": 30,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "goal_area": {
+        "depth": 5,
+        "width": 16,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "corner_arc_radius": {
+        "value": 1,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "goal_size": {
+        "width": null,
+        "height": null,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "runoff_area": {
+        "side": 2,
+        "end": 2,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "artificial_turf_suitable": true,
+      "notes": "学校场地通常受跑道、操场边界和校园安全要求影响，应支持非标尺寸。"
+    },
+    "非标定制足球场": {
+      "source_level": "fallback",
+      "primary_source": "GRASSGUY_INTERNAL_PENDING",
+      "applicable_scene": [
+        "非标工程",
+        "商业球场",
+        "屋顶场地",
+        "边角场地",
+        "改造项目"
+      ],
+      "pitch_length": {
+        "min": null,
+        "max": null,
+        "recommended": null,
+        "unit": "m",
+        "source": "user_input"
+      },
+      "pitch_width": {
+        "min": null,
+        "max": null,
+        "recommended": null,
+        "unit": "m",
+        "source": "user_input"
+      },
+      "line_width": {
+        "value": 0.08,
+        "unit": "m",
+        "source": "GRASSGUY_INTERNAL_PENDING",
+        "review_status": "pending_manual_confirmation"
+      },
+      "center_line": {
+        "position": "pitch_length / 2",
+        "source": "derived"
+      },
+      "center_circle_radius": {
+        "value": null,
+        "unit": "m",
+        "source": "scaled_from_selected_template",
+        "review_status": "pending_manual_confirmation"
+      },
+      "penalty_mark_distance": {
+        "value": null,
+        "unit": "m",
+        "source": "scaled_from_selected_template",
+        "review_status": "pending_manual_confirmation"
+      },
+      "penalty_area": {
+        "depth": null,
+        "width": null,
+        "unit": "m",
+        "source": "scaled_or_manual_input",
+        "review_status": "pending_manual_confirmation"
+      },
+      "goal_area": {
+        "depth": null,
+        "width": null,
+        "unit": "m",
+        "source": "scaled_or_manual_input",
+        "review_status": "pending_manual_confirmation"
+      },
+      "corner_arc_radius": {
+        "value": null,
+        "unit": "m",
+        "source": "scaled_or_manual_input",
+        "review_status": "pending_manual_confirmation"
+      },
+      "goal_size": {
+        "width": null,
+        "height": null,
+        "unit": "m",
+        "source": "manual_input",
+        "review_status": "pending_manual_confirmation"
+      },
+      "runoff_area": {
+        "side": null,
+        "end": null,
+        "unit": "m",
+        "source": "manual_input",
+        "review_status": "pending_manual_confirmation"
+      },
+      "artificial_turf_suitable": true,
+      "notes": "非标场地必须允许人工输入；图纸需提示不作为正式比赛标准。"
+    }
+  }
+}

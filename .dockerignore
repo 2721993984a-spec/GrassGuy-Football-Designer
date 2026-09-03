@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.git/
+.venv/
+venv/
+.env
+.streamlit/secrets.toml
+logs/
+output/
+PDF图纸/
+release_packages/
+template_knowledge/template_analysis/*.png
