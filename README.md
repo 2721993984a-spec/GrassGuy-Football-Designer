@@ -73,6 +73,12 @@ docs/server_quick_start.md
 docs/streamlit_cloud_deploy.md
 ```
 
+最简单的免费上线和小程序套壳步骤见：
+
+```text
+docs/free_online_and_miniprogram_steps.md
+```
+
 如需限制外部访问，可以配置访问密码：
 
 ```powershell
