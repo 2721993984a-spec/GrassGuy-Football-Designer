@@ -53,6 +53,9 @@ foreach ($dir in @("output/images", "output/pdf", "output/excel", "logs")) {
     New-Item -ItemType Directory -Path (Join-Path $stageRoot $dir) -Force | Out-Null
 }
 
+Get-ChildItem -LiteralPath $stageRoot -Directory -Recurse -Filter "__pycache__" |
+    Remove-Item -Recurse -Force
+
 if (Test-Path $zipPath) {
     Remove-Item -LiteralPath $zipPath -Force
 }
