@@ -563,6 +563,8 @@ def _range_codes(codes: list[str]) -> str:
 def _roll_plan_rows(params: FieldParams, line_area: float, seam_length: float, glue_kg: float) -> list[list[str]]:
     """按模板生成施工图左下角生产明细表。"""
     items = _roll_plan_items(params)
+    green_production_area = sum(item.get("production_area", item["area"]) for item in items)
+    actual_production_area = green_production_area + int(line_area)
     rows = [["序号", "颜色", "规格", "卷数", "单位", "数量", "编号"]]
     seq = 1
     grouped: dict[tuple[str, float, float], list[dict]] = {}
@@ -593,7 +595,7 @@ def _roll_plan_rows(params: FieldParams, line_area: float, seam_length: float, g
     seq += 1
     rows.append([str(seq), "接缝布", "", "", "米", str(round_to_nearest_hundred(seam_length)), ""])
     seq += 1
-    rows.append([str(seq), "场地实际面积", "", "", "㎡", f"{total_area(params):.2f}", ""])
+    rows.append([str(seq), "实际生产面积", "", "", "㎡", f"{actual_production_area:.2f}", "绿草+白草"])
     return rows
 
 

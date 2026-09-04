@@ -15,7 +15,7 @@ from src.templates import get_template, load_field_templates
 from src.utils import setup_logging
 
 
-DRAWING_STYLE_VERSION = "clean-dimension-template-v44-cloud-ready-pdf-prepared"
+DRAWING_STYLE_VERSION = "clean-dimension-template-v45-production-area-row"
 
 
 setup_logging()
