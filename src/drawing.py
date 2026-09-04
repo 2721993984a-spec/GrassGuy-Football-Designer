@@ -452,10 +452,10 @@ def _is_two_meter_dual_roll(params: FieldParams) -> bool:
 
 
 def _production_width_for_edge(actual_width: float, params: FieldParams) -> float:
-    """边上不足整卷的补卷，施工图生产面积按 4m 宽计算。"""
+    """边上不足整卷的补卷，施工图面积按实际窄宽计算。"""
     if actual_width <= 0.05:
         return 0
-    return 4.0 if actual_width < 4.0 else actual_width
+    return actual_width
 
 
 def _roll_plan_items(params: FieldParams) -> list[dict]:

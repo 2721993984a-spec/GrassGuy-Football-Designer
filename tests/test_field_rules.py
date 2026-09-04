@@ -9,7 +9,7 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_DIR))
 
 from src.calculator import FieldParams  # noqa: E402
-from src.drawing import draw_dimension_image  # noqa: E402
+from src.drawing import _roll_plan_rows, draw_dimension_image  # noqa: E402
 from src.standards import get_field_rule, load_field_rules, recommended_template  # noqa: E402
 
 
@@ -88,3 +88,45 @@ def test_drawing_generation_does_not_crash_with_rules() -> None:
     )
     path = Path(draw_dimension_image(params))
     assert path.exists()
+
+
+def test_edge_roll_area_uses_actual_width_in_construction_table() -> None:
+    """边缘补卷面积按实际窄宽计算，不再强行按4m宽放大。"""
+    params = FieldParams(
+        project_name="边条面积测试",
+        customer_name="客户",
+        field_type="5人制足球场",
+        length=19.3,
+        width=14.7,
+        include_buffer=True,
+        buffer_left_right=1,
+        buffer_top_bottom=1,
+        main_color="绿色",
+        line_color="白色",
+        center_circle_radius=3,
+        line_width=0.12,
+        has_penalty_area=True,
+        has_goal_area=True,
+        has_halfway_line=True,
+        has_center_circle=True,
+        has_corner_arc=True,
+        color_scheme="深浅绿条纹",
+        stripe_width=2,
+        waste_rate=5,
+        roll_width=4,
+        glue_per_sqm=0,
+        seam_tape_extra_rate=5,
+        penalty_area_depth=6,
+        penalty_area_width=12,
+        goal_area_depth=0.8,
+        goal_area_width=2.6,
+        edge_stripe_mode="自动合并窄边",
+    )
+    rows = _roll_plan_rows(params, line_area=8, seam_length=0, glue_kg=0)
+    edge_row = next(row for row in rows if row[1] == "单色补条")
+    production_row = next(row for row in rows if row[1] == "实际生产面积")
+
+    assert edge_row[2] == "16.7*0.65m"
+    assert edge_row[3] == "2"
+    assert edge_row[5] == "21.71"
+    assert production_row[5] == "363.71"

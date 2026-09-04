@@ -15,7 +15,7 @@ from src.templates import get_template, load_field_templates
 from src.utils import setup_logging
 
 
-DRAWING_STYLE_VERSION = "clean-dimension-template-v45-production-area-row"
+DRAWING_STYLE_VERSION = "clean-dimension-template-v46-edge-actual-area"
 
 
 setup_logging()
