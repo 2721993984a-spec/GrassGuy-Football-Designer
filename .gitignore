@@ -7,6 +7,7 @@ output/
 PDF图纸/
 .streamlit/secrets.toml
 release_packages/
+tools/
 *.bat
 run_app.ps1
 start_keepalive.ps1
