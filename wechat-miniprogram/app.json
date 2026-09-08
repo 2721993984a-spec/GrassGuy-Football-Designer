@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "草皮哥足球场画图",
+    "navigationBarBackgroundColor": "#116530",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f7f5"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

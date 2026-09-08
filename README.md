@@ -79,6 +79,18 @@ docs/streamlit_cloud_deploy.md
 docs/free_online_and_miniprogram_steps.md
 ```
 
+微信小程序套壳工程见：
+
+```text
+wechat-miniprogram/
+```
+
+小程序发布步骤见：
+
+```text
+docs/wechat_miniprogram_publish.md
+```
+
 如需限制外部访问，可以配置访问密码：
 
 ```powershell

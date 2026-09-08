@@ -123,10 +123,10 @@ def test_edge_roll_area_uses_actual_width_in_construction_table() -> None:
         edge_stripe_mode="自动合并窄边",
     )
     rows = _roll_plan_rows(params, line_area=8, seam_length=0, glue_kg=0)
-    edge_row = next(row for row in rows if row[1] == "单色补条")
+    edge_row = next(row for row in rows if row[1] == "深色草坪")
     production_row = next(row for row in rows if row[1] == "实际生产面积")
 
-    assert edge_row[2] == "16.7*0.65m"
-    assert edge_row[3] == "2"
+    assert edge_row[2] == "10.855*2m"
+    assert edge_row[3] == "1"
     assert edge_row[5] == "21.71"
     assert production_row[5] == "363.71"

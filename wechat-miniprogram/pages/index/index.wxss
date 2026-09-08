@@ -1,0 +1,25 @@
+.placeholder {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 96rpx 48rpx;
+  background: #f5f7f5;
+}
+
+.title {
+  margin-bottom: 28rpx;
+  color: #116530;
+  font-size: 44rpx;
+  font-weight: 700;
+}
+
+.text,
+.hint {
+  margin-top: 20rpx;
+  color: #243528;
+  font-size: 30rpx;
+  line-height: 1.7;
+}
+
+.hint {
+  color: #6b756d;
+}

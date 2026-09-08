@@ -471,7 +471,7 @@ def _roll_plan_items(params: FieldParams) -> list[dict]:
             items.append(
                 {
                     "code": "B1",
-                    "color": "单色补条",
+                    "color": "深色草坪",
                     "length": total_wid,
                     "width": edge_w,
                     "area": total_wid * edge_w,
@@ -506,7 +506,7 @@ def _roll_plan_items(params: FieldParams) -> list[dict]:
             items.append(
                 {
                     "code": "B1",
-                    "color": "单色补条",
+                    "color": "深色草坪",
                     "length": total_wid,
                     "width": edge_w,
                     "area": total_wid * edge_w,
@@ -573,14 +573,23 @@ def _roll_plan_rows(params: FieldParams, line_area: float, seam_length: float, g
         grouped.setdefault(key, []).append(item)
     for (color, length, width), group_items in grouped.items():
         codes = [item["code"] for item in group_items]
+        area = sum(item.get("production_area", item["area"]) for item in group_items)
+        if _is_two_meter_dual_roll(params) and all(code.startswith("B") for code in codes):
+            display_width = 2.0
+            display_length = area / display_width if area > 0 else 0
+            spec = f"{display_length:.3f}*{display_width:g}m"
+            roll_count = "1"
+        else:
+            spec = f"{length:g}*{width:g}m"
+            roll_count = str(len(group_items))
         rows.append(
             [
                 str(seq),
                 color,
-                f"{length:g}*{width:g}m",
-                str(len(group_items)),
+                spec,
+                roll_count,
                 "㎡",
-                f"{sum(item.get('production_area', item['area']) for item in group_items):.2f}",
+                f"{area:.2f}",
                 _range_codes(codes),
             ]
         )

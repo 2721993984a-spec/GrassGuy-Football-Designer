@@ -1,0 +1,18 @@
+{
+  "description": "草皮哥足球场画图平台微信小程序套壳版",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "latest",
+  "appid": "touristappid",
+  "projectname": "GrassGuy-Football-Designer",
+  "condition": {}
+}

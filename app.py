@@ -15,7 +15,7 @@ from src.templates import get_template, load_field_templates
 from src.utils import setup_logging
 
 
-DRAWING_STYLE_VERSION = "clean-dimension-template-v46-edge-actual-area"
+DRAWING_STYLE_VERSION = "clean-dimension-template-v47-edge-roll-2m-spec"
 
 
 setup_logging()

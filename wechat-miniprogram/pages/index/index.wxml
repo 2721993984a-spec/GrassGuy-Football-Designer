@@ -1,0 +1,10 @@
+<block wx:if="{{isPlaceholder}}">
+  <view class="placeholder">
+    <view class="title">草皮哥足球场画图</view>
+    <view class="text">请先在 config.js 里填写已经上线的 HTTPS 平台链接。</view>
+    <view class="hint">本地地址 127.0.0.1 不能提交为正式小程序。</view>
+  </view>
+</block>
+<block wx:else>
+  <web-view src="{{webUrl}}"></web-view>
+</block>
