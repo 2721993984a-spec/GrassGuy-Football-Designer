@@ -31,6 +31,7 @@ $include = @(
     "config",
     "src",
     "docs",
+    "wechat-miniprogram",
     "knowledge",
     "reference_templates",
     "template_knowledge"
