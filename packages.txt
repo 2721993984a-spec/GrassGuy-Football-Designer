@@ -1,3 +1,0 @@
-fontconfig
-fonts-noto-cjk
-
