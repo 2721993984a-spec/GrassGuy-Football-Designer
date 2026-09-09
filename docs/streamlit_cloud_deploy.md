@@ -30,8 +30,8 @@
 ```text
 app.py
 requirements.txt
-packages.txt
 .streamlit/
+assets/
 config/
 src/
 docs/
@@ -91,4 +91,3 @@ https://你的应用名.streamlit.app
 1. 重新上传或推送到 GitHub。
 2. Streamlit Cloud 会自动重新部署。
 3. 同事刷新链接即可看到新版。
-

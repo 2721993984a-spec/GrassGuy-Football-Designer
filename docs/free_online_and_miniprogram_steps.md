@@ -31,8 +31,8 @@ GrassGuy-Football-Designer
 ```text
 app.py
 requirements.txt
-packages.txt
 .streamlit/
+assets/
 config/
 src/
 docs/

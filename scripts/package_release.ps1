@@ -27,6 +27,7 @@ $include = @(
     ".dockerignore",
     ".env.example",
     ".streamlit",
+    "assets",
     "scripts",
     "config",
     "src",

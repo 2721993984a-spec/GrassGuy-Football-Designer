@@ -35,8 +35,15 @@ COLOR_MAP = {
 
 def _setup_chinese_font() -> None:
     """设置中文字体，保证图纸文字能正常显示。"""
-    for font_path in ["C:/Windows/Fonts/msyh.ttc", "C:/Windows/Fonts/simhei.ttf", "C:/Windows/Fonts/simsun.ttc"]:
-        if Path(font_path).exists():
+    project_root = Path(__file__).resolve().parents[1]
+    font_candidates = [
+        project_root / "assets" / "fonts" / "NotoSansCJKsc-Regular.otf",
+        Path("C:/Windows/Fonts/msyh.ttc"),
+        Path("C:/Windows/Fonts/simhei.ttf"),
+        Path("C:/Windows/Fonts/simsun.ttc"),
+    ]
+    for font_path in font_candidates:
+        if font_path.exists():
             font_manager.fontManager.addfont(font_path)
             plt.rcParams["font.sans-serif"] = [font_manager.FontProperties(fname=font_path).get_name()]
             plt.rcParams["axes.unicode_minus"] = False
